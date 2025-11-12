@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: #f0f8ff;
+}
 .enclose-item {
   display: flex;
   flex-direction: column;
@@ -17,4 +20,22 @@ h1 {
 p {
   font-size: 1.5rem;
   margin-bottom: 3rem;
+  text-align: center;
+}
+a {
+  padding-inline: 3rem;
+  padding-block: 1rem;
+  text-decoration: none;
+  color: white;
+  background-color: #0046ff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+}
+a:hover {
+  background-color: #043fe1;
 }
