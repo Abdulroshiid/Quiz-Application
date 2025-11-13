@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #f4f5f7;
+  background-color: #f0f8ff;
   display: flex;
   height: 100vh;
   flex-direction: column;
@@ -17,8 +17,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 10rem;
+  padding: 3rem 10rem;
   border-radius: 0.4rem;
+}
+.time-box {
+  padding: 0.5rem 2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+  background-color: white;
 }
 .main-body h2 {
   font-size: 2rem;
@@ -29,9 +36,28 @@ body {
   margin-bottom: 2rem;
 }
 .answer-box {
-  border: 1px solid black;
   padding: 1rem 2rem;
+}
+.ctrl-btn {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  width: 100%;
+}
+.ctrl-btn button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #053f13;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.ctrl-btn button:hover {
+  background-color: #03270b;
 }
