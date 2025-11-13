@@ -12,7 +12,7 @@ body {
   justify-content: center;
 }
 .main-body {
-  background-color: #1fe654;
+  background-color: #6fe6fc;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,7 +58,7 @@ body {
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 0.4rem;
-  background-color: #053f13;
+  background-color: #006bff;
   font-size: 1rem;
   color: white;
   cursor: pointer;
@@ -66,5 +66,5 @@ body {
   transition: 0.5s;
 }
 .ctrl-btn button:hover {
-  background-color: #03270b;
+  background-color: #045edd;
 }

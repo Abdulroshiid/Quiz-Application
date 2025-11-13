@@ -15,7 +15,13 @@ body {
 }
 h1 {
   font-size: 5rem;
+  font-weight: light;
   margin-bottom: 1rem;
+}
+i {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
 }
 p {
   font-size: 1.5rem;
