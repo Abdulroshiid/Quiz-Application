@@ -1,6 +1,6 @@
 const secondsTimer = document.querySelector(".timer");
 
-// let seconds = 15;
+let seconds = 15;
 
 const timeInterval = setInterval(() => {
   seconds--;
