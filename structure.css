@@ -36,7 +36,14 @@ body {
   margin-bottom: 2rem;
 }
 .answer-box {
+  display: flex;
+  flex-direction: column;
   padding: 1rem 2rem;
+  gap: 1rem;
+}
+.input-box {
+  display: flex;
+  gap: 1rem;
 }
 .ctrl-btn {
   margin-top: 4rem;
