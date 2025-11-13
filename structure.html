@@ -9,26 +9,40 @@
   <body>
     <div class="main-body">
       <h2>Question<span class="questionNum"> 1 </span>of 20</h2>
-      <h4 class="questions">What is the capital of france?</h4>
+      <p class="questions">What is the capital of france?</p>
       <div class="answers-box">
-        <input type="radio" name="option" id="choose1" />
-        <label for="choose1">Paris</label> <br />
+        <div class="input-box">
+          <input type="radio" name="myRadioGroup" id="option1" value="value1" />
+          <label for="choose1">Paris</label> <br />
+        </div>
 
-        <input type="radio" name="option" id="choose2" />
-        <label for="choose2">London</label> <br />
+        <div class="input-box">
+          <input
+            type="radio"
+            name="myRadioGroup"
+            id="optioon2"
+            value="value2" />
+          <label for="optioon2">London</label> <br />
+        </div>
 
-        <input type="radio" name="option" id="choose3" />
-        <label for="choose3">Rome</label> <br />
+        <div class="input-box">
+          <input type="radio" name="myRadioGroup" id="option3" value="value3" />
+          <label for="option3">Rome</label> <br />
+        </div>
 
-        <input type="radio" name="option" id="choose4" />
-        <label for="choose4">Berlin</label> <br />
+        <div class="input-box">
+          <input type="radio" name="myRadioGroup" id="option4" value="value4" />
+          <label for="option4">Berlin</label> <br />
+        </div>
 
-        <input type="radio" name="option" id="choose5" />
-        <label for="choose5">Chicago</label>
+        <div class="input-box">
+          <input type="radio" name="myRadioGroup" id="option5" value="value5" />
+          <label for="option5">Chicago</label>
+        </div>
       </div>
       <div class="ctrl-btn">
-        <button class="pre">&#8592</button>
-        <button class="next">&#8594</button>
+        <button class="pre">&#8592;</button>
+        <button class="next">&#8594;</button>
       </div>
     </div>
     <script src="function.js"></script>

@@ -17,11 +17,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-inline: 10rem;
-  padding-block: 5rem;
+  padding: 1rem 10rem;
   border-radius: 0.4rem;
 }
 .main-body h2 {
   font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.main-body p {
+  font-size: 1.5rem;
   margin-bottom: 2rem;
+}
+.answer-box {
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
