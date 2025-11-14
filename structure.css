@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #f0f8ff;
+  background-color: #6fe6fc;
   display: flex;
   height: 100vh;
   flex-direction: column;
@@ -12,7 +12,6 @@ body {
   justify-content: center;
 }
 .main-body {
-  background-color: #6fe6fc;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,9 +49,7 @@ body {
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  /* border: 1px solid black; */
-  width: 100%;
+  justify-content: center;
 }
 .control-button button {
   padding: 0.8rem 2rem;
