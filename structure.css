@@ -65,3 +65,108 @@ body {
 .control-button button:hover {
   background-color: #045edd;
 }
+.hidden {
+  display: none;
+}
+.restart-btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #006bff;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+/* ---------------------------------------
+   MOBILE RESPONSIVENESS (SMALL SCREENS)
+---------------------------------------- */
+@media (max-width: 480px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .main-body {
+    width: 95%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  .time-box {
+    font-size: 1.4rem;
+    padding: 6px 12px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .questions {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .answer-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .input-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f7f7f7;
+  }
+
+  .input-box label {
+    font-size: 0.95rem;
+    margin-left: 10px;
+  }
+
+  input[type="radio"] {
+    transform: scale(1.2);
+  }
+
+  .control-button {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .nextButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  /* RESULT SCREEN */
+  .result-screen {
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .result-screen h2 {
+    font-size: 1.3rem;
+  }
+
+  .review-block {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background: #fafafa;
+  }
+
+  .restart-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}

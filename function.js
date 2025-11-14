@@ -59,26 +59,39 @@ const questions = [
 const questionText = document.querySelector(".questions");
 const questionNumber = document.querySelector(".questionNum");
 const optionsBox = document.querySelector(".answer-box");
-
+const resultScreen = document.querySelector(".result-screen");
+const quizScreen = document.querySelector(".main-body");
+const finalScoreText = document.querySelector(".final-score");
+const finalPercentageText = document.querySelector(".final-percentage");
+const answerReviewBox = document.querySelector(".answer-review");
+const restartBtn = document.querySelector(".restart-btn");
 const secondsTimer = document.querySelector(".timer");
 const nextButton = document.querySelector(".nextButton");
 
+let radioButtons;
 let seconds;
 let currentQuestionIndex = 0;
 let timerInterval;
+let selectedAnswerIndex = null;
+let userAnswers = [];
+let score = 0;
 
 function loadQuestion() {
   // Get the current question object
+
   const current = questions[currentQuestionIndex];
 
   // Update question text and number
+
   questionText.textContent = current.question;
   questionNumber.textContent = currentQuestionIndex + 1;
 
   // Clear old options
+
   optionsBox.innerHTML = "";
 
   // Add new options
+
   current.options.forEach((option, index) => {
     optionsBox.innerHTML += `
       <div class="input-box">
@@ -88,7 +101,17 @@ function loadQuestion() {
     `;
   });
 
+  // Check the radio button the user choosed
+  radioButtons = document.querySelectorAll("input[name='myRadioGroup']");
+
+  radioButtons.forEach((radio, index) => {
+    radio.addEventListener("change", () => {
+      selectedAnswerIndex = index; // Save which option the user selected
+    });
+  });
+
   // Reset & restart timer
+
   resetTimer();
 }
 
@@ -109,7 +132,14 @@ function resetTimer() {
 }
 
 nextButton.addEventListener("click", () => {
+  if (selectedAnswerIndex === null) {
+    alert("Please select an answer first!");
+    return;
+  }
+
+  checkAnswer();
   goToNextQuestion();
+  selectedAnswerIndex = null;
 });
 
 function goToNextQuestion() {
@@ -118,8 +148,81 @@ function goToNextQuestion() {
   if (currentQuestionIndex < questions.length) {
     loadQuestion();
   } else {
-    clearInterval(timerInterval);
-    alert("Quiz Completed!");
+    showResults();
   }
 }
+
+function checkAnswer() {
+  const correctIndex = questions[currentQuestionIndex].answer;
+
+  // Save user selection (optional)
+  userAnswers.push({
+    question: questions[currentQuestionIndex].question,
+    options: questions[currentQuestionIndex].options,
+    selected: selectedAnswerIndex,
+    correct: correctIndex,
+  });
+
+  // Score increase
+  if (selectedAnswerIndex === correctIndex) {
+    score++;
+  }
+}
+
+function showResults() {
+  // Stop timer
+  clearInterval(timerInterval);
+
+  // Hide quiz and show results
+  quizScreen.classList.add("hidden");
+  resultScreen.classList.remove("hidden");
+
+  // Show raw score
+  finalScoreText.textContent = `Score: ${score} / ${questions.length}`;
+
+  // Show percentage
+  const percentage = Math.round((score / questions.length) * 100);
+  finalPercentageText.textContent = `Percentage: ${percentage}%`;
+
+  // Build the answer summary
+  answerReviewBox.innerHTML = "";
+
+  userAnswers.forEach((item, index) => {
+    const userAnswer = item.options[item.selected];
+    const correctAnswer = item.options[item.correct];
+
+    const isCorrect = item.selected === item.correct;
+
+    const block = document.createElement("div");
+    block.classList.add("review-block");
+
+    block.innerHTML = `
+      <h4>Q${index + 1}: ${item.question}</h4>
+      <p><strong>Your answer:</strong> 
+         <span style="color:${isCorrect ? "green" : "red"};">
+            ${userAnswer ?? "No answer"}
+         </span>
+      </p>
+      <p><strong>Correct answer:</strong> ${correctAnswer}</p>
+      <hr />
+    `;
+
+    answerReviewBox.appendChild(block);
+  });
+}
+restartBtn.addEventListener("click", () => {
+  // Reset everything
+  score = 0;
+  currentQuestionIndex = 0;
+  selectedAnswerIndex = null;
+  userAnswers = [];
+
+  // Hide result and show quiz UI
+  resultScreen.classList.add("hidden");
+  quizScreen.classList.remove("hidden");
+
+  // Restart quiz
+  loadQuestion();
+});
+
 loadQuestion();
