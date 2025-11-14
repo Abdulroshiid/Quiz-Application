@@ -91,6 +91,7 @@ body {
 
   .main-body {
     width: 95%;
+    text-align: center;
     margin: 10px auto;
     padding: 15px;
   }
@@ -108,7 +109,9 @@ body {
   .questions {
     font-size: 1rem;
     line-height: 1.4rem;
-    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0 auto 20px;
   }
 
   .answer-box {
@@ -116,6 +119,7 @@ body {
     flex-direction: column;
     gap: 12px;
     width: 100%;
+    text-align: left;
   }
 
   .input-box {
@@ -148,9 +152,11 @@ body {
 
   /* RESULT SCREEN */
   .result-screen {
+    max-height: 100vh;
+    overflow-y: auto;
     width: 95%;
     margin: 20px auto;
-    padding: 15px;
+    padding-bottom: 30px;
   }
 
   .result-screen h2 {
