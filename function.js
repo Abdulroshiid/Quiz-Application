@@ -63,6 +63,63 @@ const optionsBox = document.querySelector(".answer-box");
 const secondsTimer = document.querySelector(".timer");
 const nextButton = document.querySelector(".nextButton");
 
-let seconds = 15;
-let currentIndexQuestion = 0;
-let timeInterval;
+let seconds;
+let currentQuestionIndex = 0;
+let timerInterval;
+
+function loadQuestion() {
+  // Get the current question object
+  const current = questions[currentQuestionIndex];
+
+  // Update question text and number
+  questionText.textContent = current.question;
+  questionNumber.textContent = currentQuestionIndex + 1;
+
+  // Clear old options
+  optionsBox.innerHTML = "";
+
+  // Add new options
+  current.options.forEach((option, index) => {
+    optionsBox.innerHTML += `
+      <div class="input-box">
+        <input type="radio" name="myRadioGroup" id="opt${index}">
+        <label for="opt${index}">${option}</label>
+      </div>
+    `;
+  });
+
+  // Reset & restart timer
+  resetTimer();
+}
+
+function resetTimer() {
+  clearInterval(timerInterval);
+  seconds = 15;
+  secondsTimer.textContent = "15";
+
+  timerInterval = setInterval(() => {
+    seconds--;
+    secondsTimer.textContent = seconds.toString().padStart(2, "0");
+
+    if (seconds === 0) {
+      clearInterval(timerInterval);
+      goToNextQuestion();
+    }
+  }, 1000);
+}
+
+nextButton.addEventListener("click", () => {
+  goToNextQuestion();
+});
+
+function goToNextQuestion() {
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < questions.length) {
+    loadQuestion();
+  } else {
+    clearInterval(timerInterval);
+    alert("Quiz Completed!");
+  }
+}
+loadQuestion();
