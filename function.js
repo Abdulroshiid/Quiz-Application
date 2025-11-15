@@ -95,8 +95,8 @@ function loadQuestion() {
   current.options.forEach((option, index) => {
     optionsBox.innerHTML += `
       <div class="input-box">
-        <input type="radio" name="myRadioGroup" id="opt${index}">
-        <label for="opt${index}">${option}</label>
+        <input type="radio" name="myRadioGroup" id="option${index}">
+        <label for="option${index}">${option}</label>
       </div>
     `;
   });
@@ -132,11 +132,6 @@ function resetTimer() {
 }
 
 nextButton.addEventListener("click", () => {
-  if (selectedAnswerIndex === null) {
-    alert("Please select an answer first!");
-    return;
-  }
-
   checkAnswer();
   goToNextQuestion();
   selectedAnswerIndex = null;
@@ -184,7 +179,7 @@ function showResults() {
   const percentage = Math.round((score / questions.length) * 100);
   finalPercentageText.textContent = `Percentage: ${percentage}%`;
 
-  // Build the answer summary
+  // Build the answer summa ry
   answerReviewBox.innerHTML = "";
 
   userAnswers.forEach((item, index) => {
