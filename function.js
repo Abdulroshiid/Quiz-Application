@@ -82,6 +82,12 @@ const questions = [
     answer: 2,
   },
   {
+    question:
+      "What term describes a globally unique address used to identify a device on the internet or a local network?",
+    options: ["IP Address", "Tracker ID", "Location", "Phone Number"],
+    answer: 1,
+  },
+  {
     question: "Which animal is known as the King of the Jungle?",
     options: ["Lion", "Tiger", "Elephant", "Bear"],
     answer: 0,
@@ -95,6 +101,12 @@ const questions = [
     question: "What process do plants use to make their food?",
     options: ["Respiration", "Photosynthesis", "Transpiration", "Fermentation"],
     answer: 1,
+  },
+  {
+    question:
+      "Which popular hobby involves shaping, firing, and glazing clay to create pottery or sculptures?",
+    options: ["Pottery", "Calligraphy", "Weaving", "Water Aerobics"],
+    answer: 0,
   },
 ];
 console.log(questions.length);
