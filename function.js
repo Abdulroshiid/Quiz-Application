@@ -109,7 +109,6 @@ const questions = [
     answer: 0,
   },
 ];
-console.log(questions.length);
 
 const questionText = document.querySelector(".questions");
 const questionNumber = document.querySelector(".questionNum");
