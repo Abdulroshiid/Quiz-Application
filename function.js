@@ -5,6 +5,11 @@ const questions = [
     answer: 0,
   },
   {
+    question: "What is the largest land animal on Earth?",
+    options: ["Rhinoceros", "Giraffe", "Elephant", "Hippopotamus"],
+    answer: 2,
+  },
+  {
     question: "Which planet is known as the Red Planet?",
     options: ["Mars", "Earth", "Jupiter", "Venus"],
     answer: 0,
@@ -45,9 +50,20 @@ const questions = [
     answer: 1,
   },
   {
+    question:
+      "Which fashion accessory is a long, often rectangular piece of fabric worn around the neck or head?",
+    options: ["Glove", "Shawl", "Scarf", "Cufflink"],
+    answer: 2,
+  },
+  {
     question: "In what year did Nigeria gain independence?",
     options: ["1963", "1957", "1960", "1970"],
     answer: 2,
+  },
+  {
+    question: "How many legs does an insect typically have?",
+    options: ["Eight", "Nine", "Four", "Six"],
+    answer: 3,
   },
   {
     question: "Which device is used to measure temperature?",
@@ -60,9 +76,20 @@ const questions = [
     answer: 3,
   },
   {
+    question:
+      "What is the standard minimum number of players on a soccer (football) team?",
+    options: ["10", "9", "11", "12"],
+    answer: 2,
+  },
+  {
     question: "Which animal is known as the King of the Jungle?",
     options: ["Lion", "Tiger", "Elephant", "Bear"],
     answer: 0,
+  },
+  {
+    question: "Who was the first person to walk on the Moon?",
+    options: ["Buzz Aldrin", "Yuri Gagarin", "Neil Armstrong", "John Glenn"],
+    answer: 2,
   },
   {
     question: "What process do plants use to make their food?",
@@ -70,6 +97,7 @@ const questions = [
     answer: 1,
   },
 ];
+console.log(questions.length);
 
 const questionText = document.querySelector(".questions");
 const questionNumber = document.querySelector(".questionNum");
