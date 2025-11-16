@@ -20,6 +20,11 @@ const questions = [
     answer: 1,
   },
   {
+    question: "What is the primary source of energy for Earth?",
+    options: ["The Moon", "The Sun", "Fire", "Wind"],
+    answer: "The Sun",
+  },
+  {
     question: "What is the fastest land animal?",
     options: ["Cheetah", "Lion", "Horse", "Leopard"],
     answer: 0,
@@ -38,6 +43,11 @@ const questions = [
     question: "In what year did Nigeria gain independence?",
     options: ["1963", "1957", "1960", "1970"],
     answer: 2,
+  },
+  {
+    question: "Which device is used to measure temperature?",
+    options: ["Thermometer", "Barometer", "Speedometer", "Compass"],
+    answer: "Thermometer",
   },
   {
     question: "What is the chemical symbol for water?",
