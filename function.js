@@ -10,6 +10,11 @@ const questions = [
     answer: 0,
   },
   {
+    question: "Which is the smallest continent?",
+    options: ["Europe", "Africa", "Antarctica", "Australia"],
+    answer: 3,
+  },
+  {
     question: "What color do you get when you mix red and blue?",
     options: ["Green", "Purple", "Orange", "Yellow"],
     answer: 1,
@@ -22,7 +27,7 @@ const questions = [
   {
     question: "What is the primary source of energy for Earth?",
     options: ["The Moon", "The Sun", "Fire", "Wind"],
-    answer: "The Sun",
+    answer: 1,
   },
   {
     question: "What is the fastest land animal?",
@@ -47,7 +52,7 @@ const questions = [
   {
     question: "Which device is used to measure temperature?",
     options: ["Thermometer", "Barometer", "Speedometer", "Compass"],
-    answer: "Thermometer",
+    answer: 0,
   },
   {
     question: "What is the chemical symbol for water?",
