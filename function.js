@@ -85,7 +85,7 @@ const questions = [
     question:
       "What term describes a globally unique address used to identify a device on the internet or a local network?",
     options: ["IP Address", "Tracker ID", "Location", "Phone Number"],
-    answer: 1,
+    answer: 0,
   },
   {
     question: "Which animal is known as the King of the Jungle?",
