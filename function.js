@@ -47,7 +47,7 @@ const questions = [
       "Isaac Newton",
       "Nikola Tesla",
     ],
-    answer: 1,
+    answer: 0,
   },
   {
     question:
