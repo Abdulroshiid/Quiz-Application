@@ -57,8 +57,8 @@ const questions = [
   },
   {
     question: "In what year did Nigeria gain independence?",
-    options: ["1963", "1957", "1960", "1970"],
-    answer: 2,
+    options: ["1963", "1957", "1964", "1960"],
+    answer: 4,
   },
   {
     question: "How many legs does an insect typically have?",
