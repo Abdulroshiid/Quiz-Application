@@ -20,8 +20,8 @@ const questions = [
     answer: 3,
   },
   {
-    question: "What color do you get when you mix red and blue?",
-    options: ["Green", "Purple", "Orange", "Yellow"],
+    question: "What color do you get when you mix white and black?",
+    options: ["Grey", "Purple", "Orange", "Yellow"],
     answer: 1,
   },
   {
