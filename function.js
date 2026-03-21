@@ -52,7 +52,7 @@ const questions = [
   {
     question:
       "Which fashion accessory is a long, often rectangular piece of fabric worn around the neck or head?",
-    options: ["Glove", "Shawl", "Scarf", "Cufflink"],
+    options: ["Glove", "Scarf", "Shawl", "Cufflink"],
     answer: 2,
   },
   {
@@ -62,8 +62,8 @@ const questions = [
   },
   {
     question: "How many legs does an insect typically have?",
-    options: ["Eight", "Nine", "Four", "Six"],
-    answer: 3,
+    options: ["Eight", "Nine", "Six", "Four"],
+    answer: 2,
   },
   {
     question: "Which device is used to measure temperature?",
